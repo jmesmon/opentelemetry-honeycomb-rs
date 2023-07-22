@@ -36,7 +36,6 @@
 //! }
 //! ```
 use async_channel::Receiver;
-use async_std::sync::RwLock;
 use chrono::{DateTime, SecondsFormat, TimeZone, Utc};
 use derivative::Derivative;
 use futures::future::BoxFuture;
@@ -54,6 +53,7 @@ use opentelemetry::{
 use opentelemetry::{Array, Context, KeyValue};
 use serde_json::Number;
 use thiserror::Error;
+use tokio::sync::RwLock;
 use tracing::{debug, error, trace};
 
 use std::sync::{Arc, Mutex};
